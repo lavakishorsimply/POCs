@@ -1,0 +1,11 @@
+.container {
+  width: 30%;
+  border-radius: 85px;
+  background-color: #ff899e;
+ padding:55px;
+  background-size: 1800px 900px;
+  background-repeat: no-repeat;
+background-position: top;
+background-attachment: fixed;
+text-align:center;
+}

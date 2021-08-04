@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+   <link href="{% static 'css/sample.css'%}" rel="stylesheet">
+</head>
+<body style="background-image: url('{% static 'image/tf.jpg' %}');background-repeat:no-repeat;background-size: 1400px 600px;">
+<div  class="container" style="margin-left: 936px;
+    margin-top: 75px;">
+<form action="" method="POST" novalidate>
+  {% csrf_token %}
+    {% if form.non_field_error %}
+      {% for error in form.non_field_error %}
+    <p class="er">{{error}}</p>
+    {% endfor %}
+    {% endif %}
+    {% for fm in form %}
+    {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+    {% endfor %}
+<!--    <input type="submit" value="submit">-->
+    <button type="submit">login</button>
+</form>
+</div>
+</body>
+</html>

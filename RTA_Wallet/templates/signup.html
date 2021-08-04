@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="{% static 'css/sample.css'%}" rel="stylesheet">
+</head>
+<b>
+
+<body style="background-image: url('{% static 'image/rt1.jpg' %}');background-repeat:no-repeat;background-size: 1400px 600px;">
+
+<div  class="container" style="margin-left: 936px;
+    margin-top: 50px;">
+
+
+<form action="" method="POST" novalidate>
+
+    {% csrf_token %}
+
+<table style="text-align:center">
+
+
+
+
+    {% if form.non_field_error %}
+      {% for error  in  form.non_field_error %}
+    <p class="er">{{error}}</p>
+
+    {% endfor %}
+    {% endif %}
+    {% for fm in form %}
+    {{fm.label_tag}} {{fm}} {{fm.errors|striptags}}<br><br>
+    {% endfor %}
+
+<!--      <input type="submit" class="btn btn-success" value="submit">-->
+    <button type="submit">Submit</button>
+
+</table>
+</form>
+
+{% if messages %}
+{% for msg in messages %}
+<small {%if messages.tags %} class="{{message.tags}}"{% endif %}>{{msg}}</small>
+{% endfor %}
+{% endif %}
+
+      <a  href="{% url 'login_page' %}"> <input type="submit" class="btn btn-success" value="login"></a>
+
+</div>
+</b>
+</body>
+
+</html>
