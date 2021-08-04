@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+{% extends 'base.html'%}
+{% load static %}
+{% block content %}
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content=
+		"width=device-width, initial-scale=1.0">
+	<title>Portfolio</title>
+
+</head>
+
+<body bgcolor="black" >
+<table border="0" width="1500" height="800" align="center" style="padding-top:20px;">
+	<tr>
+		<th style="padding-right:20px;">
+            <a href="https://www.python.org/downloads/windows/">
+            <img src="{% static 'image/python.jpg' %}" class="img-responsive img-circle margin" style="display:inline;border-radius:500px" alt="Python" width="180" height="180">
+            </a>
+        </th>
+
+		<th style="padding-right:20px;">
+            <a href="https://docs.djangoproject.com/en/3.2/">
+
+			<img src="{% static 'image/django.jpg' %}" class="img-responsive img-circle margin" style="display:inline;border-radius:500px" alt="Django" width="180" height="180">
+            </a>
+		</th>
+
+		<th style="padding-right:20px;" >
+            <a href="https://www.tutorialspoint.com/css/index.htm">
+            <img src="{% static 'image/css.jpg' %}" class="img-responsive img-circle margin" style="display:inline;border-radius:500px" alt="Css" width="180" height="180">
+            </a>
+        </th>
+	</tr>
+	<tr>
+		<th>
+             <a href="https://www.tutorialspoint.com/html/html_overview.htm">
+           <img src="{% static 'image/html.jpg' %}" class="img-responsive img-circle margin" style="display:inline;border-radius:500px" alt="Html" width="180" height="180">
+             </a>
+        </th>
+		<th >
+            <a href="https://getbootstrap.com/docs/4.1/getting-started/introduction/">
+          <img src="{% static 'image/boot.jpg' %}" class="img-responsive img-circle margin" style="display:inline;border-radius:500px" alt="Bootstrap" width="180" height="180">
+            </a>
+        </th>
+		<th>
+            <a href="https://dev.mysql.com/doc/">
+           <img src="{% static 'image/mysql.jpg' %}" class="img-responsive img-circle margin" style="display:inline;border-radius:500px" alt="mysql" width="180" height="180">
+            </a>
+        </th>
+	</tr>
+</table>
+
+</body>
+{% endblock %}
+
+</html>
